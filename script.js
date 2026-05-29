@@ -25,40 +25,15 @@ form.addEventListener(`submit`, event => {
         currency: 'EUR',
     });
 
-    if (isNaN(cleanKm) && isNaN(cleanAge)) {
+    //r gestione Km
+    if (isNaN(cleanKm)) inputtedKm.innerText = `Dovresti mettere un numero intero nei km`;
+    else inputtedKm.innerText = `Chilometri inseriti: ${cleanKm} km`;
 
-        inputtedKm.innerText = `Dovresti mettere un numero intero nei km`
+    //r gestione Età
+    if (isNaN(cleanAge)) inputtedAge.innerText = `Dovresti mettere un numero intero nell'età`;
+    else inputtedAge.innerText = `Età inserita: ${cleanAge} anni`;
 
-        inputtedAge.innerText = `Dovresti mettere un numero intero nell'età`
-
-        ticketPrice.innerText = `Errore`
-
-    } else if (isNaN(cleanKm)) {
-
-        inputtedKm.innerText = `Dovresti mettere un numero intero nei km`
-
-        inputtedAge.innerText = `Età inserita:`
-        inputtedAge.innerText += ` ${cleanAge} anni`
-
-        ticketPrice.innerText = `Errore`
-
-    } else if (isNaN(cleanAge)) {
-
-        inputtedKm.innerText = `Km inseriti:`
-        inputtedKm.innerText += ` ${cleanKm} Km`
-
-        inputtedAge.innerText = `Dovresti mettere un numero intero nell'età`
-
-        ticketPrice.innerText = `Errore`
-    } else {
-
-        inputtedKm.innerText = `Km inseriti:`
-        inputtedKm.innerText += ` ${cleanKm} Km`
-
-        inputtedAge.innerText = `Età inserita:`
-        inputtedAge.innerText += ` ${cleanAge} anni`
-
-        ticketPrice.innerText = `Prezzo del Biglietto:`
-        ticketPrice.innerText += ` ${totalPrice}`
-    };
+    //r gestione Prezzo Totale
+    if (isNaN(cleanKm) || isNaN(cleanAge)) ticketPrice.innerText = `Errore`;
+    else ticketPrice.innerText = `Prezzo del Biglietto: ${totalPrice}`;
 });

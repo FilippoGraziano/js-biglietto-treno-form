@@ -2,6 +2,8 @@ const form = document.querySelector(`form`)
 const kmInput = form.elements.km
 const ageInput = form.elements.age
 const ticketPrice = document.getElementById(`ticket-price`)
+const inputtedKm = document.getElementById(`inputted-km`)
+const inputtedAge = document.getElementById(`inputted-age`)
 
 form.addEventListener(`submit`, event => {
 
@@ -23,5 +25,40 @@ form.addEventListener(`submit`, event => {
         currency: 'EUR',
     });
 
-    ticketPrice.innerText = `Questo è il prezzo del bisglietto: ${totalPrice}`
+    if (isNaN(cleanKm) && isNaN(cleanAge)) {
+
+        inputtedKm.innerText = `Dovresti mettere un numero intero nei km`
+
+        inputtedAge.innerText = `Dovresti mettere un numero intero nell'età`
+
+        ticketPrice.innerText = `Errore`
+
+    } else if (isNaN(cleanKm)) {
+
+        inputtedKm.innerText = `Dovresti mettere un numero intero nei km`
+
+        inputtedAge.innerText = `Età inserita:`
+        inputtedAge.innerText += ` ${cleanAge} anni`
+
+        ticketPrice.innerText = `Errore`
+
+    } else if (isNaN(cleanAge)) {
+
+        inputtedKm.innerText = `Km inseriti:`
+        inputtedKm.innerText += ` ${cleanKm} Km`
+
+        inputtedAge.innerText = `Dovresti mettere un numero intero nell'età`
+
+        ticketPrice.innerText = `Errore`
+    } else {
+
+        inputtedKm.innerText = `Km inseriti:`
+        inputtedKm.innerText += ` ${cleanKm} Km`
+
+        inputtedAge.innerText = `Età inserita:`
+        inputtedAge.innerText += ` ${cleanAge} anni`
+
+        ticketPrice.innerText = `Prezzo del Biglietto:`
+        ticketPrice.innerText += ` ${totalPrice}`
+    };
 });

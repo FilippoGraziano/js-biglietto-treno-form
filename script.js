@@ -1,3 +1,5 @@
+//r calcolo prezzo biglietto con sconti per età
+
 const form = document.querySelector(`form`)
 const kmInput = form.elements.km
 const ageInput = form.elements.age
@@ -36,4 +38,30 @@ form.addEventListener(`submit`, event => {
     //r gestione Prezzo Totale
     if (isNaN(cleanKm) || isNaN(cleanAge)) ticketPrice.innerText = `Errore`;
     else ticketPrice.innerText = `Prezzo del Biglietto: ${totalPrice}`;
+});
+
+//r dropdown event
+
+const dropdowStart = document.getElementById(`dropdown-start`)
+const dropdowList = document.getElementById(`dropdown-list`)
+const nav = document.querySelector(`nav`)
+
+let removeMenù = false
+
+dropdowStart.addEventListener(`click`, () => {
+    dropdowList.classList.toggle(`open`);
+
+    if (!removeMenù){
+
+        dropdowStart.innerHTML = `<i class="bi bi-x"></i>`
+        nav.style.padding = `10px`
+        removeMenù = true
+        console.log(`hamburger menù`)
+    } else {
+        
+        dropdowStart.innerHTML = `<i class="bi bi-list"></i>`
+        nav.style.removeProperty(`padding`)
+        removeMenù = false
+        console.log(`rimuovi lista`)
+    }
 });

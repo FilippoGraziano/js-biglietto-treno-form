@@ -49,8 +49,11 @@ const nav = document.querySelector(`nav`)
 let removeMenù = false
 
 dropdowStart.addEventListener(`click`, () => {
+
+    //r add and remove list item
     dropdowList.classList.toggle(`open`);
 
+    //r change the hamburger menù with the cross, and vice versa
     if (!removeMenù){
 
         dropdowStart.innerHTML = `<i class="bi bi-x"></i>`

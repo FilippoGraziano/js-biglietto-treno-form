@@ -47,6 +47,10 @@
     margin-bottom: 3px;
 }
 
+#train-img {
+    display: flex;
+}
+
 #submit-button {
     padding: 5px 10px;
     border-radius: 15px;
@@ -66,6 +70,10 @@
     font-size: 50px;
 }
 
+.train {
+    height: 30px;
+}
+
 .container {
 
 }
@@ -73,17 +81,21 @@
 /*r tags style */
 
 main {
-    padding: 0 30px;
+    padding: 0px 30px;
+}
+
+header {
+    background-color: #F3C412;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
 }
 
 nav {
-    background-color: #F3C412;
-    border-bottom: 2px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    margin-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 nav > input {

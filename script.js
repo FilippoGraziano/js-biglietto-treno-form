@@ -42,27 +42,27 @@ form.addEventListener(`submit`, event => {
 
 //r dropdown event
 
-const dropdowStart = document.getElementById(`dropdown-start`)
-const dropdowList = document.getElementById(`dropdown-list`)
+const dropdownStart = document.getElementById(`dropdown-start`)
+const dropdownList = document.getElementById(`dropdown-list`)
 const nav = document.querySelector(`nav`)
 
 let removeMenù = false
 
-dropdowStart.addEventListener(`click`, () => {
+dropdownStart.addEventListener(`click`, () => {
 
     //r add and remove list item
-    dropdowList.classList.toggle(`open`);
+    dropdownList.classList.toggle(`open`);
 
     //r change the hamburger menù with the cross, and vice versa
     if (!removeMenù){
 
-        dropdowStart.innerHTML = `<i class="bi bi-x"></i>`
+        dropdownStart.innerHTML = `<i class="bi bi-x"></i>`
         nav.style.padding = `10px`
         removeMenù = true
         console.log(`hamburger menù`)
     } else {
         
-        dropdowStart.innerHTML = `<i class="bi bi-list"></i>`
+        dropdownStart.innerHTML = `<i class="bi bi-list"></i>`
         nav.style.removeProperty(`padding`)
         removeMenù = false
         console.log(`rimuovi lista`)

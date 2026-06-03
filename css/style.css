@@ -6,6 +6,19 @@
     box-sizing: border-box;
 }
 
+/*r variables and utils*/
+
+:root {
+    --main-color: #F3C412;
+    --second-color: black;
+    --radius-input: 5px;
+    --border-input-text: 1px solid;
+}
+
+.flex-container {
+    display: flex;
+}
+
 /*r id style */
 
 #train-logo {
@@ -13,8 +26,8 @@
 }
 
 #search-bar {
-    border: 1px solid;
-    border-radius: 5px;
+    border: var(--border-input-text);
+    border-radius: var(--radius-input);
     font-size: 16px;
     padding: 5px;
 }
@@ -26,7 +39,7 @@
 #dropdown-list {
     list-style: none;
     display: none;
-    background-color: black;
+    background-color: var(--second-color);
     padding: 5px;
     border-radius: 10px;
 }
@@ -40,15 +53,11 @@
 
 #dropdown-list a{
     text-decoration: none;
-    color: #F3C412;
+    color:  var(--main-color);
 }
 
 #dropdown-list li {
     margin-bottom: 3px;
-}
-
-#train-container {
-    display: flex;
 }
 
 #train-img {
@@ -67,8 +76,8 @@
     padding: 7px 12px;
     border-radius: 15px;
     border: none;
-    background-color: black;
-    color: #F3C412;
+    background-color: var(--second-color);
+    color: var(--main-color);
     cursor: pointer;
 }
 
@@ -88,39 +97,35 @@
 }
 
 .card {
-    background-color: #F3C412;
+    background-color: var(--main-color);
     border: 2px solid black;
     border-radius: 15px;
     padding: 20px;
 }
 
-.container {
-
+.bedge {
+    color: var(--main-color);
+    background-color: var(--second-color);
+    border-radius: 15px;
+    padding: 5px 10px;
 }
 
 /*r tags style */
 
 header {
-    background-color: #F3C412;
+    background-color: var(--main-color);
     border-bottom: 2px solid black;
     margin-bottom: 20px;
 }
 
 nav {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     padding-bottom: 0px;
 }
 
-nav > input {
-    height: 25px;
-    border-radius: 5px;
-    border: 0px;
-}
-
-form > div, button {
+form > div {
     margin-bottom: 10px;
 }
 
@@ -128,10 +133,20 @@ main {
     padding: 0px 30px;
 }
 
-section > div{
-    margin-bottom: 10px;
+section > ul {
+    list-style: none;
 }
 
 h2 {
     margin-bottom: 15px;
+}
+
+input[type="text"] {
+    border-radius: var(--radius-input);
+    border: var(--border-input-text);
+    padding: 3px;
+}
+
+section  li:nth-child(-n+2){
+    margin-bottom: 10px;
 }

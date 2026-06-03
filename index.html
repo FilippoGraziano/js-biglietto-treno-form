@@ -21,7 +21,7 @@
 
     <header>
 
-        <nav>
+        <nav class="flex-container">
 
             <a href="#">
                 <img id="train-logo" src="img/train-logo.png" alt="icon">
@@ -55,7 +55,7 @@
             </div>
         </nav>
 
-        <div id="train-container">
+        <div class="flex-container">
             <div id="train-img"></div>
             <img src="img/testa-treno-stilizzato.png" id="train-head" alt="train-head">
         </div>
@@ -86,9 +86,11 @@
 
             <h2>Qui hai i tuoi risultati</h2>
 
-            <div id="inputted-km">Chilometri inseriti: 0 km</div>
-            <div id="inputted-age">Età inserita: 0 anni</div>
-            <div id="ticket-price">Prezzo del Biglietto: 0,00€</div>
+            <ul>
+                <li id="inputted-km">Chilometri inseriti: <span class="bedge">0 km</span></li>
+                <li id="inputted-age">Età inserita: <span class="bedge">0 anni</span></li>
+                <li id="ticket-price">Prezzo del Biglietto: <span class="bedge">0,00€</span></li>
+            </ul>
 
         </section>
 

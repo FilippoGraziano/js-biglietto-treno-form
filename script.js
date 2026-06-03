@@ -29,15 +29,15 @@ form.addEventListener(`submit`, event => {
 
     //r gestione Km
     if (isNaN(cleanKm)) inputtedKm.innerText = `Dovresti mettere un numero intero nei km`;
-    else inputtedKm.innerText = `Chilometri inseriti: ${cleanKm} km`;
+    else inputtedKm.innerHTML = `Chilometri inseriti: <span class="bedge">${cleanKm}</span>`;
 
     //r gestione Età
     if (isNaN(cleanAge)) inputtedAge.innerText = `Dovresti mettere un numero intero nell'età`;
-    else inputtedAge.innerText = `Età inserita: ${cleanAge} anni`;
+    else inputtedAge.innerHTML = `Età inserita: <span class="bedge">${cleanAge}</span>`;
 
     //r gestione Prezzo Totale
     if (isNaN(cleanKm) || isNaN(cleanAge)) ticketPrice.innerText = `Errore`;
-    else ticketPrice.innerText = `Prezzo del Biglietto: ${totalPrice}`;
+    else ticketPrice.innerHTML = `Prezzo del Biglietto: <span class="bedge">${totalPrice}</span>`;
 });
 
 //r dropdown event

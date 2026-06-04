@@ -28,10 +28,10 @@ form.addEventListener(`submit`, event => {
     });
 
     //r gestione Km
-    inputtedKm.innerHTML = `Chilometri inseriti: <span class="bedge">${cleanKm}</span>`;
+    inputtedKm.innerHTML = `Chilometri inseriti: <span class="bedge">${cleanKm} km</span>`;
 
     //r gestione Età
-    inputtedAge.innerHTML = `Età inserita: <span class="bedge">${cleanAge}</span>`;
+    inputtedAge.innerHTML = `Età inserita: <span class="bedge">${cleanAge} anni</span>`;
 
     //r gestione Prezzo Totale
     ticketPrice.innerHTML = `Prezzo del Biglietto: <span class="bedge">${totalPrice}</span>`;

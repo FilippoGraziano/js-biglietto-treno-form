@@ -57,13 +57,11 @@ dropdownStart.addEventListener(`click`, () => {
     if (!removeMenù){
 
         dropdownStart.innerHTML = `<i class="bi bi-x"></i>`
-        nav.style.padding = `10px`
         removeMenù = true
         console.log(`hamburger menù`)
     } else {
         
         dropdownStart.innerHTML = `<i class="bi bi-list"></i>`
-        nav.style.removeProperty(`padding`)
         removeMenù = false
         console.log(`rimuovi lista`)
     }

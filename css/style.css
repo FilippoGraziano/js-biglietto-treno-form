@@ -142,7 +142,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-input[type="text"] {
+input[type="number"] {
     border-radius: var(--radius-input);
     border: var(--border-input-text);
     padding: 3px;

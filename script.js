@@ -28,16 +28,13 @@ form.addEventListener(`submit`, event => {
     });
 
     //r gestione Km
-    if (isNaN(cleanKm)) inputtedKm.innerText = `Dovresti mettere un numero intero nei km`;
-    else inputtedKm.innerHTML = `Chilometri inseriti: <span class="bedge">${cleanKm}</span>`;
+    inputtedKm.innerHTML = `Chilometri inseriti: <span class="bedge">${cleanKm}</span>`;
 
     //r gestione Età
-    if (isNaN(cleanAge)) inputtedAge.innerText = `Dovresti mettere un numero intero nell'età`;
-    else inputtedAge.innerHTML = `Età inserita: <span class="bedge">${cleanAge}</span>`;
+    inputtedAge.innerHTML = `Età inserita: <span class="bedge">${cleanAge}</span>`;
 
     //r gestione Prezzo Totale
-    if (isNaN(cleanKm) || isNaN(cleanAge)) ticketPrice.innerText = `Errore`;
-    else ticketPrice.innerHTML = `Prezzo del Biglietto: <span class="bedge">${totalPrice}</span>`;
+    ticketPrice.innerHTML = `Prezzo del Biglietto: <span class="bedge">${totalPrice}</span>`;
 });
 
 //r dropdown event
@@ -54,13 +51,13 @@ dropdownStart.addEventListener(`click`, () => {
     dropdownList.classList.toggle(`open`);
 
     //r change the hamburger menù with the cross, and vice versa
-    if (!removeMenù){
+    if (!removeMenù) {
 
         dropdownStart.innerHTML = `<i class="bi bi-x"></i>`
         removeMenù = true
         console.log(`hamburger menù`)
     } else {
-        
+
         dropdownStart.innerHTML = `<i class="bi bi-list"></i>`
         removeMenù = false
         console.log(`rimuovi lista`)
